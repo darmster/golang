@@ -1,1 +1,25 @@
 Go has only one looping construct, the for loop.
+
+#Solution for exercise loops and functions (of course there are other solutions)
+package main
+
+import (
+	"fmt"
+)
+
+func Sqrt(x float64) float64 {
+    count := 0
+    z := 1.0
+	for count < 10 {
+	    z -= (z*z - x) / (2*z)
+		count++
+	}
+	return z
+}
+
+func main() {
+	fmt.Println(Sqrt(7))
+}
+...........................
+
+
